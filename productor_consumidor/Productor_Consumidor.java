@@ -3,6 +3,7 @@ package com.elizalde.productor_consumidor;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -175,9 +176,9 @@ public class Productor_Consumidor extends JFrame implements Runnable{
 	@Override
 	public void run() {
 		
-		Random randomSleep = new Random();
+		Random randomSleep = new SecureRandom();
 		int sleepTime = randomSleep.nextInt(500-01)+500;
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int selection;
 		
 		while(running)
