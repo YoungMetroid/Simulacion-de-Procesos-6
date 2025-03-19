@@ -1,6 +1,7 @@
 package com.elizalde.productor_consumidor;
 
 import java.awt.Color;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -28,7 +29,7 @@ public class hilo_Productor implements Runnable{
 
 	@Override
 	public void run() {
-		Random random = new Random();
+		Random random = new SecureRandom();
 		int productor;
 		while(running)
 		{
